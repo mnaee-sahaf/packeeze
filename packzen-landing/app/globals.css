@@ -51,10 +51,9 @@
 
 @layer base {
   * { /* Global styles for all elements */
-    border: 1px solid var(--border); /* Apply border color */
+    @apply border-border; /* Use Tailwind's border utilities */
   }
   body { /* Global styles for body */
-    background-color: var(--background); /* Apply background color */
-    color: var(--foreground); /* Apply text color */
+    @apply bg-background text-foreground; /* Use Tailwind's background and text utilities */
   }
 }
