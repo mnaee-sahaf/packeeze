@@ -3,26 +3,6 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Package, Leaf, Star, ArrowRight, ChevronRight, Phone } from 'lucide-react'
-// import { DynamicBox, DynamicCanvas, DynamicSphere, DynamicCylinder, DynamicOrbitControls } from './DynamicComponents'
-
-// const ProductModel: React.FC<{ category: string }> = ({ category }) => {
-//   switch (category) {
-//     case 'Boxes':
-//       return <DynamicBox args={[1, 1, 1]} />
-//     case 'Mailers':
-//       return <DynamicBox args={[1.5, 0.1, 1]} />
-//     case 'Bags':
-//       return <DynamicSphere args={[0.5, 32, 32]} />
-//     case 'Food Packaging':
-//       return <DynamicCylinder args={[0.5, 0.5, 1, 32]} />
-//     case 'Retail Packaging':
-//       return <DynamicBox args={[1, 1.5, 0.5]} />
-//     case 'Accessories':
-//       return <DynamicSphere args={[0.3, 32, 32]} />
-//     default:
-//       return null
-//   }
-// }
 
 export default function Component() {
   return (
@@ -30,7 +10,7 @@ export default function Component() {
       <header className="px-4 lg:px-6 h-16 flex items-center border-b border-gray-200">
         <Link className="flex items-center justify-center" href="#">
           <Package className="h-6 w-6 text-blue-600" />
-          <span className="ml-2 text-2xl font-bold text-blue-600">
+          <span className="ml-2 text-2xl font-bold">
             <span className="font-extrabold">PACK</span>ZEN
           </span>
         </Link>
@@ -87,16 +67,10 @@ export default function Component() {
                     height={300}
                     className="object-cover w-full h-48 transition-transform group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-[#0F172A] bg-opacity-40 transition-opacity group-hover:bg-opacity-50" />
+                  <div className="absolute inset-0 bg-[#ADD8E6] transition-opacity group-hover:bg-opacity-40" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <h3 className="text-2xl font-bold text-white mb-4">{category}</h3>
                     <div className="w-32 h-32">
-                      {/* <DynamicCanvas>
-                        <ambientLight intensity={0.5} />
-                        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-                        <ProductModel category={category} />
-                        <DynamicOrbitControls enableZoom={false} autoRotate />
-                      </DynamicCanvas> */}
                     </div>
                   </div>
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -138,7 +112,7 @@ export default function Component() {
               </div>
               <div className="mt-4 lg:mt-0">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/nbg.png"
                   alt="Sustainable Packaging"
                   width={600}
                   height={400}
@@ -156,7 +130,7 @@ export default function Component() {
                 <div key={i} className="flex flex-col items-center text-center space-y-4 p-6 bg-white rounded-lg shadow-lg">
                   <Star className="h-8 w-8 text-blue-600" />
                   <p className="text-[#64748B]">
-                    &quot;PackZen has revolutionized our packaging process. Their custom solutions perfectly align with our brand identity, and the quality is outstanding.&quot;
+                    &quot;Packzen has revolutionized our packaging process. Their custom solutions perfectly align with our brand identity, and the quality is outstanding.&quot;
                   </p>
                   <div>
                     <h4 className="font-semibold text-blue-600">Jane Doe</h4>
@@ -187,7 +161,7 @@ export default function Component() {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-200">
-        <p className="text-xs text-[#64748B]">© 2024 PackZen. All rights reserved.</p>
+        <p className="text-xs text-[#64748B]">© 2024 Packzen. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs text-[#64748B] hover:text-blue-600 transition-colors" href="#">
             Terms of Service
