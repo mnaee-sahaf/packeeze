@@ -3,13 +3,23 @@
 ## Component Organization
 - `app/page.tsx`: Main landing page component
 - `app/layout.tsx`: Root layout with font configuration and metadata
-- Other pages are organized in their own files (products.tsx, about.tsx, etc.)
+- All route pages must be named `page.tsx` and placed in their corresponding directories:
+  - `app/products/page.tsx` for /products
+  - `app/about/page.tsx` for /about
+  - `app/sustainability/page.tsx` for /sustainability
+  - `app/contact/page.tsx` for /contact
+  - `app/legal/[section]/page.tsx` for legal pages
+- Existing component files without 'page.tsx' naming will not be routable
 
 ## Navigation Structure
 - Main navigation in header
 - Product categories link to specific sections using hash routes
 - Legal pages under `/legal/*` route pattern
-- All internal links use Next.js Link component for client-side navigation
+- All internal links must use Next.js Link component for client-side navigation
+- File-based routing follows Next.js App Router conventions:
+  - Pages must be named `page.tsx` to be routable
+  - Directory name becomes the route (e.g., `app/about/page.tsx` → `/about`)
+  - Components that aren't pages should not use `page.tsx` naming
 
 ## Import Requirements
 - Swiper CSS must be imported in layout.tsx for carousel functionality
